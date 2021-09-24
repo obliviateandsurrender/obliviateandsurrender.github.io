@@ -130,14 +130,6 @@ span.highlight {
   background-color: #ffffd0;
 }
 
-@media screen and (min-width: 768px) {
-  body { padding-top: 70px; }
-}
-
-@media screen and (max-width: 768px) {
-  body { padding-top: 160px; }
-}
-
 a.active {
   color: rgb(0, 0, 0);
   text-decoration-color: azure;
