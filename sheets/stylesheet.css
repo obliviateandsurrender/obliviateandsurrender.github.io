@@ -124,6 +124,10 @@ a {
     padding: 8px 22px 8px 22px;
 }
 
+.navbar-collapse.collapse.in {
+    display: block!important;
+}
+
 body {
     background-color: #f8f9fa;
 }
