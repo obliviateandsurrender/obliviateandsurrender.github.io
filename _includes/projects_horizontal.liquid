@@ -1,0 +1,56 @@
+<div class="card-item col">
+  <a href="{% if project.redirect %}{{ project.redirect }}{% else %}{{ project.url | relative_url }}{% endif %}">
+    <div class="card hoverable">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle; text-align:center">
+                <img src="{{project.img}}" alt="project thumbnail" weight="60">
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+
+                <h5><b>{{project.title}}</b></h5>
+                <h6 style="color:gray;"><b>{{project.funding}}</b></h6>
+                <!-- <font color="red"><strong>(Supported by Unitary Fund)</strong></font> -->
+                <div class="row ml-1 mr-1 p-0">
+                  {%- if project.report -%}
+                  <div class="report-icon">
+                    <div class="icon" data-toggle="tooltip" title="Report">
+                      <a href="{{ project.report }}"><i class="fas fa-scroll rp-icon"></i></a>
+                    </div>
+                  </div>
+                  &nbsp; &nbsp;
+                  {%- endif %}
+                  {%- if project.codebase -%}
+                  <div class="code-icon">
+                    <div class="icon" data-toggle="tooltip" title="Codebase">
+                      <a href="{{ project.codebase }}"><i class="fas fa-code cd-icon"></i></a>
+                    </div>
+                  </div>
+                  &nbsp; &nbsp;
+                  {%- endif %}
+                  {%- if project.github -%}
+                  <div class="github-icon">
+                    <div class="icon" data-toggle="tooltip" title="Code Repository">
+                      <a href="{{ project.github }}"><i class="fab fa-github gh-icon"></i></a>
+                    </div>
+                    {%- if project.github_stars -%}
+                    <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                      <i class="fas fa-star"></i>
+                      <span id="{{ project.github_stars }}-stars"></span>
+                    </span>
+                    {%- endif %}
+                  </div>
+                  {%- endif %}
+                </div>
+                <!-- <a href="{{ project.codebase }}">Codebase</a> / -->
+                <!-- <a href="{{ project.report }}">Preprint</a> -->
+                <p></p>
+                <p>{{project.description}}</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </a>
+</div>
