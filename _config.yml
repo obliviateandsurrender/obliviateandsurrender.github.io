@@ -400,7 +400,7 @@ jquery:
   version: "3.6.0"
   integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 mathjax:
-  version: "3.2.0"
+  version: "3.2.2"
 masonry:
   version: "4.2.2"
   integrity: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
@@ -433,9 +433,3 @@ jsonresume:
   - languages
   - interests
   - references
-
-mathjax: true
-mathjax_config:
-  mathjax_url: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js'
-  inline_math_delimiters: ['$', '$']
-  display_math_delimiters: ['$$', '$$']
